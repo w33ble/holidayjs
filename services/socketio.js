@@ -1,5 +1,11 @@
-console.log('socket.js found');
+module.exports = function(io) {
+  console.log('exports socket');
 
-module.exports = function(server) {
-  io = require('socket.io').listen(server);
+  io.sockets.on('connection', function (socket) {
+    console.log('socket connection');
+    socket.emit('news', { hello: 'world' });
+    socket.on('my other event', function (data) {
+      console.log(data);
+    });
+  });
 };

@@ -11,8 +11,6 @@ var express = require('express'),
   ;
 
 var app = express();
-var wsserver = require('http').createServer(app);
-
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -36,10 +34,10 @@ app.get('/', function(req, res){
 });
 
 // create our server
-http.createServer(app).listen(app.get('port'), function(){
+var server = http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
 
 // websocket server, aka. the magic
-wsserver.listen(80);
-require('./services/socketio.js')(wsserver);
+io = require('socket.io').listen(server);
+require('./services/socketio.js')(io);
