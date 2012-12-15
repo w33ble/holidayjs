@@ -42,6 +42,25 @@ $(document).ready(function() {
   $('#capture').click(function(e) {
     var shot = new Image();
     ctx.drawImage(video, 0, 0);
+    shot.src = canvas.toDataURL();
+
+    socket.emit("new image", {image: shot.src});
+
+    drawCircle(10,10, shot);
   });
+
+  function drawCircle(x, y, img) {
+    ctx.beginPath();
+    ctx.fillStyle = "rgb(255,255,255)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height); //fill the background. color is default black
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.arc(x, y, 60, 0, 6.28, false); //draw the circle
+    ctx.clip(); //call the clip method so the next render is clipped in last path
+    ctx.stroke();
+    ctx.closePath();
+    ctx.drawImage(img, x - 290, y-100);
+  }
 
 });
