@@ -32,11 +32,11 @@
 
 body
 {
-background-image:url('images/beautiful-christmas-tree.jpg');
+background-image:url('../img/beautiful-christmas-tree.jpg');
 background-repeat:no-repeat;
 background-attachment:fixed;
 background-position:center;
-} 
+}
 
 
 
@@ -73,30 +73,30 @@ h1 {
 h1::first-letter {
 	font-size:200%;
 	color:blue;
-	}	
-	
-	
+	}
+
+
 h2 {
-	
+
 	text-align: center;
-	}	
+	}
 h3 {
-	
+
 	text-align: center;
-	}	
+	}
 h4 {
-	
+
 	text-align: center;
 	}
 h5 {
-	
+
 	text-align: center;
 	}
-	
+
 h6 {
-	
+
 	text-align: center;
-	}	
+	}
 p {
 	padding-left: 50px;
 	padding-right: 50px;
@@ -107,16 +107,16 @@ p::first-letter {
 	font-size:200%;
 	color:blue;
 	}
-	
-	
-	
+
+
+
 code {
 	padding-left: 100px;
 	padding-right: 100px;
 	margin: 0.5em 0;
 	font-size: 1.5em;
 	}
-	
+
 kbd, samp, math {
 	margin: 0.5em 0;
 	font-size: 1.5em;
@@ -126,17 +126,17 @@ math {
 	margin: 0.5em 0;
 	font-size: 2.5em;
 	}
-	
+
 meter {
 	font-size: 1.5em;
 	margin-left: 10px;
 	}
-	
+
 p.meter {
 	font-size: 1.5em;
 	}
-	
-	
+
+
 p.mat {
 	padding-top: 10px;
 	text-align: center;
@@ -155,26 +155,26 @@ span.red {
 
 	color: red;
 	}
-	
-	
+
+
 ul	{
 	padding-left: 0px;
 	}
 
 ul.index	{
 	margin-left: 90px;
-	}	
+	}
 
 ul.none	{
 	padding-left: 10px;
 	list-style-type: none;
-	}	
-	
+	}
+
 ol	{
 	padding-left: 100px;
 	padding-right: 50px;
 	}
-	
+
 li	{
 	margin-bottom: 1em;
 	}
@@ -186,7 +186,7 @@ footer {
 	color: #ffffff;
 
 	}
-	
+
 /* Links */
 a:link {
 	color: #000000;
@@ -198,7 +198,7 @@ a:visited {
 	color: #909;
 	text-decoration: none;
 }
-	
+
 a:focus {
 	color: #900;
 	text-decoration: none;
@@ -208,19 +208,19 @@ a:hover {
 	color: #c3f;
 	font-weight: bold;
 	text-decoration: underline;
-}	
+}
 
 a:active {
 	color: #090;
 	text-decoration: none;
-}	
-	
-	
+}
+
+
 img.displayed {
     display: block;
     margin-left: auto;
     margin-right: auto;
-	}	
+	}
 
 .wrapper {
 
@@ -233,7 +233,7 @@ img.displayed {
 
     -webkit-box-shadow: 0px 0px 40px #000; /* Saf3.0+, Chrome */
     -moz-box-shadow: 0px 0px 40px #000; /* FF3.5 - 3.6 */
-    box-shadow: 0px 0px 40px #000; /* Opera 10.5, IE9, FF4+, Chrome 10+ */	
+    box-shadow: 0px 0px 40px #000; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
 }
 
 section.sidebar1 {
@@ -324,11 +324,11 @@ hr {
 	border-bottom:25px solid silver;
 	}
 
-/*	
+/*
 * Prevents sub and sup affectiong line-height in all browsers
 * gist.github.com/413930
 */
-	
+
 sub,
 sup {
 	font-size: 75%;
