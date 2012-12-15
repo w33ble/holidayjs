@@ -1,0 +1,381 @@
+@charset "UTF-8";
+
+
+/* Palette color codes */
+/* Feel free to copy&paste color codes to your application */
+
+.primary-1 { background-color: #FF9200 }
+.primary-2 { background-color: #BF8230 }
+.primary-3 { background-color: #A65F00 }
+.primary-4 { background-color: #FFAD40 }
+.primary-5 { background-color: #FFC373 }
+
+.secondary-a-1 { background-color: #A600A6 }
+.secondary-a-2 { background-color: #7C1F7C }
+.secondary-a-3 { background-color: #6C006C }
+.secondary-a-4 { background-color: #D235D2 }
+.secondary-a-5 { background-color: #D25FD2 }
+
+.secondary-b-1 { background-color: #CCF600 }
+.secondary-b-2 { background-color: #A1B92E }
+.secondary-b-3 { background-color: #85A000 }
+.secondary-b-4 { background-color: #DAFB3F }
+.secondary-b-5 { background-color: #E3FB71 }
+
+.complement-1 { background-color: #0B61A4 }
+.complement-2 { background-color: #25567B }
+.complement-3 { background-color: #033E6B }
+.complement-4 { background-color: #3F92D2 }
+.complement-5 { background-color: #66A3D2 }
+
+/* end */
+
+body
+{
+background-image:url('images/beautiful-christmas-tree.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-position:center;
+} 
+
+
+
+
+
+
+
+
+
+#mycanvas	{
+
+
+}
+
+
+
+
+
+
+
+body {
+	margin:0; padding: 2em;
+	background-color: #ffad40;
+	color: #000;
+	font: 75%/1.33 Verdana, sans-serif;
+	text-align:left;
+	}
+h1 {
+	padding-top: 10px;
+	font-size: 200%;
+	text-align: center;
+	}
+
+h1::first-letter {
+	font-size:200%;
+	color:blue;
+	}	
+	
+	
+h2 {
+	
+	text-align: center;
+	}	
+h3 {
+	
+	text-align: center;
+	}	
+h4 {
+	
+	text-align: center;
+	}
+h5 {
+	
+	text-align: center;
+	}
+	
+h6 {
+	
+	text-align: center;
+	}	
+p {
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: 1.5em 0;
+	}
+
+p::first-letter {
+	font-size:200%;
+	color:blue;
+	}
+	
+	
+	
+code {
+	padding-left: 100px;
+	padding-right: 100px;
+	margin: 0.5em 0;
+	font-size: 1.5em;
+	}
+	
+kbd, samp, math {
+	margin: 0.5em 0;
+	font-size: 1.5em;
+	}
+
+math {
+	margin: 0.5em 0;
+	font-size: 2.5em;
+	}
+	
+meter {
+	font-size: 1.5em;
+	margin-left: 10px;
+	}
+	
+p.meter {
+	font-size: 1.5em;
+	}
+	
+	
+p.mat {
+	padding-top: 10px;
+	text-align: center;
+	}
+
+time {
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: 0.5em 0;
+	}
+
+p.green {
+	color: green;
+	}
+span.red {
+
+	color: red;
+	}
+	
+	
+ul	{
+	padding-left: 0px;
+	}
+
+ul.index	{
+	margin-left: 90px;
+	}	
+
+ul.none	{
+	padding-left: 10px;
+	list-style-type: none;
+	}	
+	
+ol	{
+	padding-left: 100px;
+	padding-right: 50px;
+	}
+	
+li	{
+	margin-bottom: 1em;
+	}
+
+footer {
+	padding:1em;
+	text-align:center;
+	background-color: #0B61A4;
+	color: #ffffff;
+
+	}
+	
+/* Links */
+a:link {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #909;
+	text-decoration: none;
+}
+	
+a:focus {
+	color: #900;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #c3f;
+	font-weight: bold;
+	text-decoration: underline;
+}	
+
+a:active {
+	color: #090;
+	text-decoration: none;
+}	
+	
+	
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	}	
+
+.wrapper {
+
+/* Main page container */
+	background-color: #e3fb71;
+	text-align: left;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+
+    -webkit-box-shadow: 0px 0px 40px #000; /* Saf3.0+, Chrome */
+    -moz-box-shadow: 0px 0px 40px #000; /* FF3.5 - 3.6 */
+    box-shadow: 0px 0px 40px #000; /* Opera 10.5, IE9, FF4+, Chrome 10+ */	
+}
+
+section.sidebar1 {
+	float: left;
+	width: 200px;
+	background: #EADCAE;
+	padding-bottom: 10px;
+}
+
+.content {
+	padding: 10px 0;
+	width: 800px;
+	float: right;
+}
+
+nav ul {
+	list-style: none; /* this removes the list marker */
+	border-top: 2px solid #FFF;
+	border-left: 2px solid #FFF;
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	color: #FFFFFF;
+	/* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+nav ul li {
+	border-bottom: 1px solid #666;
+	color: #FFFFFF;
+	/* this creates the button separation */
+}
+nav ul a, nav ul a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 176px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: #A600A6;
+	color: #E3FB71;
+}
+nav ul a:hover, nav ul a:active, nav ul a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #FF9200;
+	color: #FFFFFF;
+}
+
+table.colortable td {text-align:center }
+table.colortable td.c { text-transform:uppercase }
+table.colortable td:first-child, table.colortable td:first-child+td { border:1px solid black }
+table.colortable th {text-align:center; background:black; color:white }
+
+
+
+
+
+
+
+.color-table {
+	margin: 2em 2em 5em;
+	border-collapse:collapse;
+	border:none;
+	border-spacing:0;
+	font-size:100%;
+	}
+.color-table th {
+	padding: 0 1em 0 0;
+	text-align:right;
+	vertical-align: middle;
+	font-size:110%;
+	border: none;
+	}
+.color-table td.sample {
+	width:10em; height:8em;
+	padding: 10px;
+	text-align:center;
+	vertical-align:middle;
+	font-size:90%;
+	border: 1px solid white;
+	white-space:nowrap;
+	}
+.color-table.small td.sample {
+	width:4em; height:4em;
+	padding:0;
+	border:none;
+	}
+.color-table .white { margin-bottom:0.2em; color:white }
+.color-table .black { margin-top:0.2em; color:black }
+
+hr {
+	border:none;
+	border-bottom:25px solid silver;
+	}
+
+/*	
+* Prevents sub and sup affectiong line-height in all browsers
+* gist.github.com/413930
+*/
+	
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.3em;
+}
+
+sub {
+	bottom: -0.1em;
+}
+
+aside {
+	background: #FFC373;
+	border: 4px solid #D25FD2;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 12px;
+	padding: 0 10px;
+	width: 400px;
+}
+
+aside h3 {
+	font-size: 2.0em;
+	padding-top: 8px;
+	text-transform: none;
+}
+
+aside ul {
+	margin-left: 0;
+	padding-left: 20px;
+}
+
+aside p,
+aside li {
+	text-align: left;
+	font-size: 1.0em;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+
+aside cite {
+	font-style: normal;
+}
+
