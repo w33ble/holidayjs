@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+  var canvas = $("#canvas1")[0];
+  var ctx = canvas.getContext("2d");
+  var video = $('video')[0];
+
   navigator.getMedia = ( navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
                          navigator.mozGetUserMedia ||
@@ -14,11 +18,9 @@ $(document).ready(function() {
 
      // successCallback
      function(localMediaStream) {
-        var video = $('video')[0];
+
         video.src = window.URL.createObjectURL(localMediaStream);
         video.onloadedmetadata = function(e) {
-           var canvas = $("#canvas1")[0];
-           var ctx = canvas.getContext("2d");
 
         };
      },
@@ -29,5 +31,10 @@ $(document).ready(function() {
      }
 
   );
+
+  $('#capture').click(function(e) {
+    var shot = new Image();
+    ctx.drawImage(video, 0, 0);
+  });
 
 });
