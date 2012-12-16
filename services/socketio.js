@@ -1,5 +1,11 @@
 module.exports = function(io) {
 
+  io.configure(function() {
+      var s = 4; //poll ever s seconds
+      io.set('transports', ["xhr-polling"]);
+      io.set('polling duration', s); //check every s seconds
+  });
+
   io.sockets.on('connection', function (socket) {
 
     // socket.emit('news', { hello: 'world' });
@@ -10,7 +16,9 @@ module.exports = function(io) {
 
     socket.emit('new user');
 
-    socket.on('new image', function(data) { console.log("new image", data); });
+    socket.on('new image', function(data) {
+      socket.broadcast('image swap', data);
+    });
 
   });
 };
