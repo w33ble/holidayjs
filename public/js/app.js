@@ -55,7 +55,9 @@ $(document).ready(function() {
   var points = [
     {x: 545, y: 100},
     {x: 484, y: 293},
-    {x: 581, y: 293}
+    {x: 620, y: 293},
+    {x: 380, y: 500},
+    {x: 680, y: 500}
   ];
 
   var point = 0;
