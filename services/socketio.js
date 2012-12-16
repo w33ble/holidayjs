@@ -14,11 +14,11 @@ module.exports = function(io) {
     //   console.log(data);
     // });
 
-    socket.emit('new user');
+    socket.broadcast.emit('new user');
 
     socket.on('new image', function(data) {
       // console.log(data);
-      socket.broadcast.emit('new image', {image: data});
+      socket.broadcast.emit('new image', data);
     });
 
   });
