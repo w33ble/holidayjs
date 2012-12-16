@@ -1,10 +1,5 @@
 var socket = io.connect();
 
-socket.on('new user', function(data) {
-  // this fires the first time a user connects
-  console.log("new user!", data);
-});
-
 $(document).ready(function() {
 
   var canvas = $("#canvas1")[0];
