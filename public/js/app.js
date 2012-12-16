@@ -2,7 +2,7 @@ var socket = io.connect('http://localhost');
 
 socket.on('new user', function(data) {
   // this fires the first time a user connects
-
+  console.log("new user!", data);
 });
 
 $(document).ready(function() {
@@ -87,11 +87,17 @@ $(document).ready(function() {
 
   drawTarget();
 
+
+
   var stage = new Kinetic.Stage({
       container: 'container',
       width: 1024,
       height: 768
     });
+
+  var tree = new Image();
+  tree.src = "/img/beautiful-christmas-tree.jpg";
+  tree.onload = function() {
     var layer = new Kinetic.Layer();
 
     var rect = new Kinetic.Rect({
@@ -100,7 +106,7 @@ $(document).ready(function() {
         width: 1024,
         height: 768,
         fill: {
-          image: $("#tree")[0]
+          image: tree
         },
         stroke: 'black',
         strokeWidth: 4
@@ -108,6 +114,7 @@ $(document).ready(function() {
 
     layer.add(rect);
     stage.add(layer);
+  };
 
   function drawCircle(img) {
     var layer = new Kinetic.Layer();
