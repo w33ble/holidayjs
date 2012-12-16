@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost');
+var socket = io.connect();
 
 socket.on('new user', function(data) {
   // this fires the first time a user connects
