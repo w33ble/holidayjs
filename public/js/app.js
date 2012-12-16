@@ -63,4 +63,8 @@ $(document).ready(function() {
     ctx.drawImage(img, x - 290, y-100);
   }
 
+  socket.on('new image', function(data) {
+
+  });
+
 });
