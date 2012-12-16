@@ -46,21 +46,62 @@ $(document).ready(function() {
 
     socket.emit("new image", {image: shot.src});
 
-    drawCircle(10,10, shot);
+    shot.onload=function() {
+       drawCircle(shot);
+     };
   });
 
-  function drawCircle(x, y, img) {
-    ctx.beginPath();
-    ctx.fillStyle = "rgb(255,255,255)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height); //fill the background. color is default black
-    ctx.closePath();
+  function drawTarget() {
+    var stage = new Kinetic.Stage({
+      container: 'target',
+      width: 640,
+      height: 480
+    });
+    var layer = new Kinetic.Layer();
 
-    ctx.beginPath();
-    ctx.arc(x, y, 60, 0, 6.28, false); //draw the circle
-    ctx.clip(); //call the clip method so the next render is clipped in last path
-    ctx.stroke();
-    ctx.closePath();
-    ctx.drawImage(img, x - 290, y-100);
+    var circle = new Kinetic.Circle({
+        x: stage.getWidth() / 2,
+        y: stage.getHeight() / 2,
+        radius: 70,
+        stroke: 'black',
+        strokeWidth: 4
+      });
+
+      // add the shape to the layer
+      layer.add(circle);
+
+      // add the layer to the stage
+      stage.add(layer);
+  }
+
+  drawTarget();
+
+  var stage = new Kinetic.Stage({
+      container: 'container',
+      width: 640,
+      height: 480
+    });
+    var layer = new Kinetic.Layer();
+
+  function drawCircle(img) {
+
+    var circle = new Kinetic.Circle({
+        x: stage.getWidth() / 2,
+        y: stage.getHeight() / 2,
+        radius: 70,
+        fill: {
+          image: img,
+          offset: [320, 240]
+        },
+        stroke: 'black',
+        strokeWidth: 4
+      });
+
+      // add the shape to the layer
+      layer.add(circle);
+
+      // add the layer to the stage
+      stage.add(layer);
   }
 
   socket.on('new image', function(data) {
