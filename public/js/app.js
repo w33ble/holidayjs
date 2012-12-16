@@ -76,13 +76,14 @@ $(document).ready(function() {
 
   drawTarget();
 
-  function drawCircle(img) {
-    var stage = new Kinetic.Stage({
+  var stage = new Kinetic.Stage({
       container: 'container',
       width: 640,
       height: 480
     });
     var layer = new Kinetic.Layer();
+
+  function drawCircle(img) {
 
     var circle = new Kinetic.Circle({
         x: stage.getWidth() / 2,
