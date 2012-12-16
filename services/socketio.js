@@ -17,7 +17,7 @@ module.exports = function(io) {
     socket.emit('new user');
 
     socket.on('new image', function(data) {
-      console.log(data);
+      // console.log(data);
       socket.broadcast.emit('new image', {image: data});
     });
 
