@@ -52,6 +52,14 @@ $(document).ready(function() {
     socket.emit("new image", {image: shot.src});
   });
 
+  var points = [
+    {x: 545, y: 100},
+    {x: 484, y: 293},
+    {x: 581, y: 293}
+  ];
+
+  var point = 0;
+
   function drawTarget() {
     var stage = new Kinetic.Stage({
       container: 'target',
@@ -79,16 +87,32 @@ $(document).ready(function() {
 
   var stage = new Kinetic.Stage({
       container: 'container',
-      width: 640,
-      height: 480
+      width: 1024,
+      height: 768
     });
     var layer = new Kinetic.Layer();
 
+    var rect = new Kinetic.Rect({
+        x: 0,
+        y: 0,
+        width: 1024,
+        height: 768,
+        fill: {
+          image: $("#tree")[0]
+        },
+        stroke: 'black',
+        strokeWidth: 4
+      });
+
+    layer.add(rect);
+    stage.add(layer);
+
   function drawCircle(img) {
+    var layer = new Kinetic.Layer();
 
     var circle = new Kinetic.Circle({
-        x: stage.getWidth() / 2,
-        y: stage.getHeight() / 2,
+        x: points[point].x,
+        y: points[point].y,
         radius: 70,
         fill: {
           image: img,
@@ -103,10 +127,21 @@ $(document).ready(function() {
 
       // add the layer to the stage
       stage.add(layer);
+
+      point++;
+      if(point > points.length -1) {
+        point = 0;
+      }
   }
 
   socket.on('new image', function(data) {
     // draw new image in the canvas
+    var shot = new Image();
+    shot.src = data;
+
+    shot.onload=function() {
+       drawCircle(shot);
+     };
   });
 
 });
