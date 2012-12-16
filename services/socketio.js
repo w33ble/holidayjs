@@ -18,7 +18,7 @@ module.exports = function(io) {
 
     socket.on('new image', function(data) {
       console.log(data);
-      socket.broadcast('new image', data);
+      socket.broadcast.emit('new image', {image: data});
     });
 
   });

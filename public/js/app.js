@@ -135,9 +135,10 @@ $(document).ready(function() {
   }
 
   socket.on('new image', function(data) {
+    console.log(data);
     // draw new image in the canvas
     var shot = new Image();
-    shot.src = data;
+    shot.src = data.image;
 
     shot.onload=function() {
        drawCircle(shot);
