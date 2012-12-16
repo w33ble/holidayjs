@@ -44,11 +44,12 @@ $(document).ready(function() {
     ctx.drawImage(video, 0, 0);
     shot.src = canvas.toDataURL();
 
-    socket.emit("new image", {image: shot.src});
-
     shot.onload=function() {
        drawCircle(shot);
      };
+
+    // send image data to server for broadcast
+    socket.emit("new image", {image: shot.src});
   });
 
   function drawTarget() {
@@ -105,7 +106,7 @@ $(document).ready(function() {
   }
 
   socket.on('new image', function(data) {
-
+    // draw new image in the canvas
   });
 
 });

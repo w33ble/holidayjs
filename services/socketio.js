@@ -17,7 +17,8 @@ module.exports = function(io) {
     socket.emit('new user');
 
     socket.on('new image', function(data) {
-      socket.broadcast('image swap', data);
+      console.log(data);
+      socket.broadcast('new image', data);
     });
 
   });
